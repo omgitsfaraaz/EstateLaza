@@ -16,6 +16,7 @@ const Nav = styled.nav`
 
 const Logo = styled(Link)`
     color: #fff;
+    font-style: italic;
 `;
 
 const MenuBars = styled.i``;
