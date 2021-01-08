@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { menuData } from '../data/MenuData';
 
@@ -14,17 +14,30 @@ const Nav = styled.nav`
     background: #000;
 `;
 
-const Logo = styled(Link)`
+const NavLink = css`
     color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    text-decoraton: none;
+`;
+
+const Logo = styled(Link)`
+    ${NavLink}
     font-style: italic;
 `;
 
 const MenuBars = styled.i``;
 
-const NavMenu = styled.div``;
+const NavMenu = styled.div`
+    display: flex;
+    align-items: center;
+`;
 
 const NavMenuLinks = styled(Link)`
-    color: #fff;
+    ${NavLink}
 `;
 
 const Navbar = () => {
