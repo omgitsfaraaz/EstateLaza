@@ -22,7 +22,7 @@ const NavLink = css`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
-    text-decoraton: none;
+    text-decoration: none;
 `;
 
 const Logo = styled(Link)`
@@ -30,11 +30,14 @@ const Logo = styled(Link)`
     font-style: italic;
 `;
 
-const MenuBars = styled.i``;
+const MenuBars = styled.i`
+    display: none;
+`;
 
 const NavMenu = styled.div`
     display: flex;
     align-items: center;
+    margin-right: -48px;
 `;
 
 const NavMenuLinks = styled(Link)`
