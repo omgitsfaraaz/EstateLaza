@@ -21,7 +21,12 @@ const HeroWrapper = styled.div`
     position: relative;
 `;
 
-const HeroSlide = styled.div``;
+const HeroSlide = styled.div`
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+`;
+
 const HeroSlider = styled.div``;
 const HeroImage = styled.img``;
 const HeroContent = styled.div``;
@@ -69,7 +74,7 @@ const Hero = ({ slides }) => {
                     return (
                         <HeroSlide key={index}>
                             <HeroSlider>
-                                <HeroImage />
+                                <HeroImage src={slide.image} alt={slide.alt} />
                                 <HeroContent>
                                     <h1>{slide.title}</h1>
                                     <p>{slide.price}</p>
