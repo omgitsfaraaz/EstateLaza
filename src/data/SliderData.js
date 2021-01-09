@@ -5,11 +5,11 @@ import ImageFour from '../images/house-4.jpg';
 
 export const SliderData = [
     {
-        title: 'Luxury Villa in Bali, Indonesia',
+        title: 'House in Houston, Texas',
         price: '$4,280,000',
         path: '/homes',
         label: 'View Home',
-        image: ImageOne,
+        image: ImageFour,
         alt: 'House'
     },
     {
@@ -29,11 +29,11 @@ export const SliderData = [
         alt: 'House'
     },
     {
-        title: 'House in Houston, Texas',
+        title: 'Luxury Villa in Bali, Indonesia',
         price: '$6,660,000',
         path: '/homes',
         label: 'View Home',
-        image: ImageFour,
+        image: ImageOne,
         alt: 'House'
     }
 ];
