@@ -65,7 +65,22 @@ const HeroImage = styled.img`
     object-fit: cover;
 `;
 
-const HeroContent = styled.div``;
+const HeroContent = styled.div`
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    width: calc(100% - 100px);
+    color: #fff;
+
+    h1 {
+        font-size: clamp(1rem, 8vw, 2rem);
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+`;
+
 const Arrow = styled(IoMdArrowRoundForward)``;
 
 const SliderButtons = styled.div`
