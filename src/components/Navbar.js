@@ -37,13 +37,14 @@ const MenuBars = styled(FaBars)`
     @media screen and (max-width: 768px) {
         display: block;
         background-size: contain;
-        height: 30px;
+        height: 20px;
         width: 40px;
         cursor: pointer;
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-50%, 55%);
+        transform: translate(-50%, 100%);
+        fill: white;
 `;
 
 const NavMenu = styled.div`
