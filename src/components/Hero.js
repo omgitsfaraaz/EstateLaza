@@ -36,6 +36,24 @@ const HeroSlider = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100vh;
+        bottom: 0vh;
+        left: 0;
+        overflow: hidden;
+        opacity: 0.4;
+        background: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.2) 50%,
+            rgba(0,0,0,0.6) 100%
+        )
+    }
 `;
 
 const HeroImage = styled.img`
@@ -44,7 +62,7 @@ const HeroImage = styled.img`
     left: 0;
     width: 100vw;
     height: 100vh;
-    // object-fit: cover;
+    object-fit: cover;
 `;
 
 const HeroContent = styled.div``;
