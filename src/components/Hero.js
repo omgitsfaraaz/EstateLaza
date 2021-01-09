@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import styled, { css } from 'styled-components/macro';
 import { Button } from './Button';
 import { IoMdArrowRoundForward } from 'react-icons/io';
@@ -88,7 +88,9 @@ const HeroContent = styled.div`
     }
 `;
 
-const Arrow = styled(IoMdArrowRoundForward)``;
+const Arrow = styled(IoMdArrowRoundForward)`
+    margin-left: 0.5rem;
+`;
 
 const SliderButtons = styled.div`
     position: absolute;
@@ -125,6 +127,23 @@ const NextArrow = styled(IoArrowForward)`
 `;
 
 const Hero = ({ slides }) => {
+
+    const[current, setCurrent] = useState(0)
+    const length = slides.length
+    const timeout = useRef(null)
+
+    const nextSlide = () => {
+        setCurrent(current === length -1 ? 0 : current + 1);
+
+        // console.log(current);
+    }
+
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1);
+
+        // console.log(current);
+    }
+
     return (
         <HeroSection>
             <HeroWrapper>
@@ -152,8 +171,8 @@ const Hero = ({ slides }) => {
                     )
                 })}
                 <SliderButtons>
-                    <PrevArrow />
-                    <NextArrow />
+                    <PrevArrow onClick={prevSlide} />
+                    <NextArrow onClick={nextSlide} />
                 </SliderButtons>
             </HeroWrapper>
         </HeroSection>
