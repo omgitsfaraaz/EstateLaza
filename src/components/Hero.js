@@ -150,23 +150,26 @@ const Hero = ({ slides }) => {
                 {slides.map((slide, index) => {
                     return (
                         <HeroSlide key={index}>
-                            <HeroSlider>
-                                <HeroImage src={slide.image} alt={slide.alt} />
-                                <HeroContent>
-                                    <h1>{slide.title}</h1>
-                                    <p>{slide.price}</p>
-                                    <Button 
-                                        to={slide.path} 
-                                        primary='true'
-                                        css={`
-                                            max-width: 160px;
-                                        `}
-                                    >
-                                        {slide.label}
-                                        <Arrow />
-                                    </Button>
-                                </HeroContent>
-                            </HeroSlider>
+                            {index === current && (
+                                <HeroSlider>
+                                    <HeroImage src={slide.image} alt={slide.alt} />
+                                    <HeroContent>
+                                        <h1>{slide.title}</h1>
+                                        <p>{slide.price}</p>
+                                        <Button 
+                                            to={slide.path} 
+                                            primary='true'
+                                            css={`
+                                                max-width: 160px;
+                                            `}
+                                        >
+                                            {slide.label}
+                                            <Arrow />
+                                        </Button>
+                                    </HeroContent>
+                                </HeroSlider>                               
+                            )}
+                            
                         </HeroSlide>
                     )
                 })}
