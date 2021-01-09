@@ -37,7 +37,13 @@ const Hero = ({ slides }) => {
                                 <HeroContent>
                                     <h1>{slide.title}</h1>
                                     <p>{slide.price}</p>
-                                    <Button to={slide.path} primary='true'>
+                                    <Button 
+                                        to={slide.path} 
+                                        primary='true'
+                                        css={`
+                                            max-width: 160px;
+                                        `}
+                                    >
                                         {slide.label}
                                     </Button>
                                 </HeroContent>
