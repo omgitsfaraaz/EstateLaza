@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaSlideshare } from 'react-icons/fa';
 import styled, { css } from 'styled-components/macro';
 
 const HeroSection = styled.section`
@@ -18,11 +19,27 @@ const HeroWrapper = styled.div`
     position: relative;
 `;
 
-const Hero = () => {
+const HeroSlide = styled.div``
+const HeroSlider = styled.div``
+const HeroImage = styled.div``
+const HeroContent = styled.div``
+
+const Hero = ({ slides }) => {
     return (
         <HeroSection>
             <HeroWrapper>
-                <h1>Hero</h1>
+                {slides.map((slide, index) => {
+                    return (
+                        <HeroSlide key={index}>
+                            <HeroSlider>
+                                <HeroImage />
+                                <HeroContent>
+                                    <h1>{slide.title}</h1>
+                                </HeroContent>
+                            </HeroSlider>
+                        </HeroSlide>
+                    )
+                })}
             </HeroWrapper>
         </HeroSection>
     )
