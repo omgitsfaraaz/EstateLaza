@@ -132,19 +132,19 @@ const Hero = ({ slides }) => {
     const length = slides.length;
     const timeout = useRef(null);
 
-    // useEffect(() => {
-    //     const nextSlide = () => {
-    //         setCurrent(current => (current === length - 1 ? 0 : current + 1))
-    //     }
+    useEffect(() => {
+        const nextSlide = () => {
+            setCurrent(current => (current === length - 1 ? 0 : current + 1))
+        }
 
-    //     timeout.current = setTimeout(nextSlide, 1000)
+        timeout.current = setTimeout(nextSlide, 4000)
 
-    //     return function () {
-    //         if(timeout.current) {
-    //             clearTimeout(timeout.current)
-    //         }
-    //     }
-    // }, [current, length])
+        return function () {
+            if(timeout.current) {
+                clearTimeout(timeout.current)
+            }
+        }
+    }, [current, length])
 
     const nextSlide = () => {
         if(timeout.current) {
@@ -176,16 +176,17 @@ const Hero = ({ slides }) => {
                         <HeroSlide key={index}>
                             {index === current && (
                                 <HeroSlider>
-                                    <HeroImage src={slide.image} alt={slide.alt} />
+                                    <HeroImage data-aos="fade" src={slide.image} alt={slide.alt} />
                                     <HeroContent>
-                                        <h1>{slide.title}</h1>
-                                        <p>{slide.price}</p>
+                                        <h1 data-aos="fade-down">{slide.title}</h1>
+                                        <p data-aos="fade-down">{slide.price}</p>
                                         <Button 
                                             to={slide.path} 
                                             primary='true'
                                             css={`
                                                 max-width: 160px;
                                             `}
+                                            data-aos="zoom-out"
                                         >
                                             {slide.label}
                                             <Arrow />

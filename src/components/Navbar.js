@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { menuData } from '../data/MenuData';
 import { Button } from './Button';
 import { FaBars } from 'react-icons/fa';
+import '../App.css';
+
 
 const Nav = styled.nav`
     height: 60px;
@@ -71,8 +73,19 @@ const NavBtn = styled.div`
 `;
 
 const Navbar = ({toggle}) => {
+    const [navbar, setNavbar] = useState(false);
+
+    const changeBackground = () => {
+        if(window.scrollY > 60) {
+            setNavbar(true);
+        } else {
+            setNavbar(false);
+        }
+    }
+
+    window.addEventListener('scroll', changeBackground);
     return (
-        <Nav>
+        <Nav className={navbar ? 'navbar active' : 'navbar'}>
             <Logo to="/">ESTATELAZA</Logo>
             <MenuBars onClick={toggle} />
             <NavMenu>
