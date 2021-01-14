@@ -97,3 +97,11 @@
     position: absolute;
     z-index: 1;
 }
+
+.services-cell:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+    z-index: 99;
+    overflow: hidden;
+}
