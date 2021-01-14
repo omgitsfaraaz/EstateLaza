@@ -13,6 +13,16 @@ export const InfoData = {
     delay: 100
 };
 
+export const ModernData = {
+    heading: 'Modern Designs',
+    paragraphOne: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.',
+    paragraphTwo: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    buttonLabel: 'View Homes',
+    image: ImageTwo,
+    reverse: false,
+    delay: 100
+};
+
 export const InfoData1 = {
     heading1: 'View our newest Homes',
     descriptionOne: '8 Bed 10 Bath House in Venice, California',

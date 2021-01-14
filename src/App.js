@@ -5,11 +5,13 @@ import GlobalStyle from './globalStyles';
 import { SliderData } from './data/SliderData';
 import Dropdown from './components/Dropdown';
 import InfoSection from './components/InfoSection';
-import { InfoData, InfoData1 } from './data/InfoData';
+import { InfoData, InfoData1, ModernData } from './data/InfoData';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import './App.css';
 import InfoSection1 from './components/InfoSection1';
+import ModernDesign from './components/ModernDesigns';
+import Services from './components/Services';
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
       <Hero slides={SliderData} />
       <InfoSection {...InfoData} />
       <InfoSection1 {...InfoData1} />
+      <ModernDesign {...ModernData} />
+      <Services />
       <div className="grids">
         <div data-aos="zoom-in-right" className="boxes">1</div>
         <div data-aos="zoom-out" className="boxes">2</div>
