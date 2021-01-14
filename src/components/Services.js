@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import imageOne from '../images/img-1.jpg';
 
 const Services = () => {
     return (
@@ -9,7 +10,7 @@ const Services = () => {
 
             <div className="services">
                 <div className="services-cell">
-                    <img className="services-cell_img" alt="" src="" />
+                    <img className="services-cell_img" alt="" src={imageOne} />
                     <div className="services-cell_text">Development</div>
                 </div>
                 <div className="services-cell">
